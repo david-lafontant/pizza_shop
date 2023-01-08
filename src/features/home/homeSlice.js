@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
+import pizzas from "../../assets/data/pizzas";
 
 const initialState = {
-  pizzaItems: [],
+  pizzaItems: pizzas,
   amount: 0,
   isLoading: true,
 }
