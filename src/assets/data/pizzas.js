@@ -1,4 +1,4 @@
-export const pizzas = [
+const Pizzas = [
   {
     id: 1,
     price: 25.99,
@@ -63,4 +63,6 @@ export const pizzas = [
     name: 'plouk',
     quantity: 1
   }
-]
+];
+
+export default Pizzas;
