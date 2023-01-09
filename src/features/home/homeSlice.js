@@ -28,11 +28,14 @@ const homeSlice = createSlice({
       const pizzaItem = state.pizzaItems.find((item) => item.id === payload);
       pizzaItem.quantity -= 1;
     },
+    removeAllFromCart: (state) => {
+      state = initialState
+    }
 
   }
 
 })
 
 // console.log(homeSlice.reducer);
-export const { addToCart, removeFromCart, incrementQuantity, decrementQuantity } = homeSlice.actions;
+export const { addToCart, removeFromCart, incrementQuantity, decrementQuantity, removeAllFromCart } = homeSlice.actions;
 export default homeSlice.reducer;
