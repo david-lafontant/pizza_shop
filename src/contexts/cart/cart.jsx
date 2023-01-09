@@ -8,7 +8,7 @@ const Cart = () => {
 
   if(cartPizzas.length > 0){
     cartPizzas.forEach(item => {
-      if(item.isIncart === true){
+      if(item.isInCart === true){
         list.push(item);
       }
     })
