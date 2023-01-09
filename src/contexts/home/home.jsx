@@ -1,5 +1,5 @@
 import React from 'react';
-import Pizza from '../../components/pizza/PIzza';
+import Pizza from '../../components/pizza/Pizza';
 import { useSelector } from 'react-redux';
 
 const Home = () => {
