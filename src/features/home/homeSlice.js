@@ -14,12 +14,16 @@ const homeSlice = createSlice({
   reducers: {
     addToCart: (state, { payload }) => {
       const pizzaItem = state.pizzaItems.find((item) => item.id === payload);
-      pizzaItem.isIncart = true;
+      pizzaItem.isInCart = true;
+    },
+    removeFromCart: (state, {payload}) =>{
+      const pizzaItem = state.pizzaItems.find((item) => item.id === payload);
+      pizzaItem.isInCart = false;
     }
   }
 
 })
 
 // console.log(homeSlice.reducer);
-export const { addToCart } = homeSlice.actions;
+export const { addToCart, removeFromCart } = homeSlice.actions;
 export default homeSlice.reducer;
