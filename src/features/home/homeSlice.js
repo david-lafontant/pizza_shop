@@ -19,11 +19,15 @@ const homeSlice = createSlice({
     removeFromCart: (state, {payload}) =>{
       const pizzaItem = state.pizzaItems.find((item) => item.id === payload);
       pizzaItem.isInCart = false;
+    },
+    incrementQuantity: (state, { payload }) => {
+      const pizzaItem = state.pizzaItems.find((item) => item.id === payload);
+      pizzaItem.quantity += 1;
     }
   }
 
 })
 
 // console.log(homeSlice.reducer);
-export const { addToCart, removeFromCart } = homeSlice.actions;
+export const { addToCart, removeFromCart, incrementQuantity } = homeSlice.actions;
 export default homeSlice.reducer;
