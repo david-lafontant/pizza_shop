@@ -23,11 +23,16 @@ const homeSlice = createSlice({
     incrementQuantity: (state, { payload }) => {
       const pizzaItem = state.pizzaItems.find((item) => item.id === payload);
       pizzaItem.quantity += 1;
-    }
+    },
+    decrementQuantity: (state, { payload }) => {
+      const pizzaItem = state.pizzaItems.find((item) => item.id === payload);
+      pizzaItem.quantity -= 1;
+    },
+
   }
 
 })
 
 // console.log(homeSlice.reducer);
-export const { addToCart, removeFromCart, incrementQuantity } = homeSlice.actions;
+export const { addToCart, removeFromCart, incrementQuantity, decrementQuantity } = homeSlice.actions;
 export default homeSlice.reducer;
