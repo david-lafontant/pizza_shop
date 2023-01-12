@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { addToCart } from '../../features/home/homeSlice';
+import { addToCart, removeFromCart } from '../../features/home/homeSlice';
 
 const Pizza = (props) => {
   const dispatch = useDispatch()
@@ -15,7 +15,7 @@ const Pizza = (props) => {
     <img src={props.pizza.image} alt={props.pizza.name} style={{width: '100px', height: '100px'}} />
     <p>{props.pizza.name}</p>
     <p>{props.pizza.price}</p>
-    {!props.pizza.isIncart?  <button type="button" onClick={()=>dispatch(addToCart(props.pizza.id))}>Add to cart</button> :  <button type="button" onClick={()=>console.log(props.pizza.id)}>Remove to Cart</button>}
+    {!props.pizza.isInCart?  <button type="button" onClick={()=>dispatch(addToCart(props.pizza.id))}>Add to cart</button> :  <button type="button" onClick={()=>dispatch(removeFromCart(props.pizza.id))}>Remove From Cart</button>}
    
    
     </article>
