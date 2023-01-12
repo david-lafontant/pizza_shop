@@ -6,6 +6,7 @@ const Pizzas = [
     name: 'plak',
     isInCart: false,
     quantity: 0,
+    total:0
     
   },
   {
@@ -15,6 +16,7 @@ const Pizzas = [
     name: 'plouk',
     isInCart: false,
     quantity: 0,
+    total: 0
     
   },
   {
@@ -24,6 +26,7 @@ const Pizzas = [
     name: 'Biouk',
     isInCart: false,
     quantity: 0,
+    total: 0
     
   },
   {
@@ -33,6 +36,7 @@ const Pizzas = [
     name: 'plouk',
     isInCart: false,
     quantity: 0,
+    total: 0
     
   },
   {
@@ -42,6 +46,7 @@ const Pizzas = [
     name: 'plak',
     isInCart: false,
     quantity: 0,
+    total: 0
     
   },
   {
@@ -51,6 +56,7 @@ const Pizzas = [
     name: 'Biouk',
     isInCart: false,
     quantity: 0,
+    total: 0
     
   },
   {
@@ -60,6 +66,7 @@ const Pizzas = [
     name: 'Biouk',
     isInCart: false,
     quantity: 0,
+    total: 0
     
   },
   {
@@ -69,6 +76,7 @@ const Pizzas = [
     name: 'plak',
     isInCart: false,
     quantity: 0,
+    total: 0
     
   },
   {
@@ -78,6 +86,7 @@ const Pizzas = [
     name: 'plouk',
     isInCart: false,
     quantity: 0,
+    total: 0
     
   }
 ];
