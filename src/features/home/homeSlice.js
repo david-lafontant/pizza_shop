@@ -4,7 +4,7 @@ import pizzas from "../../assets/data/pizzas";
 const initialState = {
   pizzaItems: pizzas,
   number: 0,
-  total: 0,
+  grandTotal: 0,
   isLoading: true,
 }
 
