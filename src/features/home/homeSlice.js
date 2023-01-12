@@ -16,18 +16,24 @@ const homeSlice = createSlice({
     addToCart: (state, { payload }) => {
       const pizzaItem = state.pizzaItems.find((item) => item.id === payload);
       pizzaItem.isInCart = true;
+      pizzaItem.quantity = 1
+      state.number += 1;
     },
     removeFromCart: (state, {payload}) =>{
       const pizzaItem = state.pizzaItems.find((item) => item.id === payload);
       pizzaItem.isInCart = false;
+      pizzaItem.quantity = 0
+      state.number -= 1;
     },
     incrementQuantity: (state, { payload }) => {
       const pizzaItem = state.pizzaItems.find((item) => item.id === payload);
       pizzaItem.quantity += 1;
+      state.number += 1;
     },
     decrementQuantity: (state, { payload }) => {
       const pizzaItem = state.pizzaItems.find((item) => item.id === payload);
-      pizzaItem.quantity -= 1;
+      if(pizzaItem.quantity>0 )pizzaItem.quantity -= 1;
+      state.number -= 1;
     },
     removeAllFromCart: (state) => {
       state.pizzaItems.forEach((item)=> {
