@@ -3,7 +3,8 @@ import pizzas from "../../assets/data/pizzas";
 
 const initialState = {
   pizzaItems: pizzas,
-  quantity: 0,
+  number: 0,
+  total: 0,
   isLoading: true,
 }
 
@@ -29,7 +30,11 @@ const homeSlice = createSlice({
       pizzaItem.quantity -= 1;
     },
     removeAllFromCart: (state) => {
-      state = initialState
+      state.pizzaItems.forEach((item)=> {
+        item.isInCart = false;
+        item.quantity = 0;
+      })
+      state.number = 0;
     }
 
   }
