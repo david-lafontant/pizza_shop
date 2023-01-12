@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { PlusIcon, MinusIcon, TrashIcon } from '../icons/Icons';
 import { removeFromCart, incrementQuantity, decrementQuantity } from '../../features/home/homeSlice'
+import { formatMoney } from '../../modules/format'
 // import { PlusIcon, MinusIcon, TrashIcon } from '../icons/Icons'
 
 
@@ -28,18 +29,14 @@ const CartData = ({ pizza }) => {
       <h4>
         {pizza.name}
       </h4>
+      <h4>Total {formatMoney(pizza.total)}</h4>
       <button className="cart-btn" type="button" 
-      
-
-        onClick={()=>dispatch(removeFromCart(pizza.id))
-      
-      
+        onClick={()=>dispatch(removeFromCart(pizza.id)) 
       }>
         <TrashIcon />
       </button>
-      <div className="user">
-
-        <div className="user-info">
+      <div className="pizza-number">
+        <div className="user-data">
         <button className="cart-btn" type="button" onClick={()=> dispatch(incrementQuantity(pizza.id))}>
           <PlusIcon />
         </button>
