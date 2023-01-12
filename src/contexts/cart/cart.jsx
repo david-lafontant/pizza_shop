@@ -6,6 +6,7 @@ import { removeAllFromCart } from '../../features/home/homeSlice'
 const Cart = () => {
   const dispatch = useDispatch();
   const cartPizzas = useSelector((store) => store.home.pizzaItems);
+  const grandTotal = useSelector((store) => store.home.grandTotal)
   const list = [];
 
   if (cartPizzas.length > 0) {
@@ -31,11 +32,14 @@ const Cart = () => {
   return (
     <section>
       <div style={myStyle}>
-      {list.map(pizza => <CartData key={pizza.name} pizza={pizza} /> )}
-       
+        {list.map(pizza => <CartData key={pizza.name} pizza={pizza} />)}
+
       </div>
       <div>
-        <button type="button" onClick={()=> dispatch(removeAllFromCart())}>
+        <p>Total price {grandTotal}</p>
+      </div>
+      <div>
+        <button type="button" onClick={() => dispatch(removeAllFromCart())}>
           Clear Cart
         </button>
       </div>
