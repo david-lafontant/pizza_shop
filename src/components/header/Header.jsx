@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 const Header = () => {
-  const quantity = useSelector((store) => store.home.quantity)
+  const number = useSelector((store) => store.home.number)
   const myStyle = {
     width: '100%',
     height: '20vh',
@@ -27,7 +27,7 @@ const Header = () => {
   return (
     <header style={myStyle}>
       <h2 style={{ textAlign: 'center', fontSize: '2rem' }}>Welcome to my Pizza Shop</h2>
-      <p style={{ textAlign: 'center', fontSize: '1.5rem' }}>Your cart contains <span>{quantity}</span> Pizzas</p>
+      <p style={{ textAlign: 'center', fontSize: '1.5rem' }}>Your cart contains <span>{number}</span> Pizzas</p>
       <nav>
         <ul style={navStyle}>
           <li>
