@@ -1,8 +1,10 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import CartData from '../../components/CartData/CartData';
+import { removeAllFromCart } from '../../features/home/homeSlice'
 
 const Cart = () => {
+  const dispatch = useDispatch();
   const cartPizzas = useSelector((store) => store.home.pizzaItems);
   const list = [];
 
@@ -31,6 +33,11 @@ const Cart = () => {
       <div style={myStyle}>
       {list.map(pizza => <CartData key={pizza.name} pizza={pizza} /> )}
        
+      </div>
+      <div>
+        <button type="button" onClick={()=> dispatch(removeAllFromCart())}>
+          Clear Cart
+        </button>
       </div>
     </section>);
 }
