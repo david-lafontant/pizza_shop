@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { PlusIcon, TrashIcon } from '../icons/Icons';
+import { PlusIcon, MinusIcon, TrashIcon } from '../icons/Icons';
 import { removeFromCart, incrementQuantity, decrementQuantity } from '../../features/home/homeSlice'
 // import { PlusIcon, MinusIcon, TrashIcon } from '../icons/Icons'
 
@@ -30,8 +30,7 @@ const CartData = ({ pizza }) => {
       </h4>
       <button className="cart-btn" type="button" 
       
-      // removeFromCart
-      // onClick={dispatch(()=> removeFromCart(pizza.id))
+
         onClick={()=>dispatch(removeFromCart(pizza.id))
       
       
@@ -39,14 +38,14 @@ const CartData = ({ pizza }) => {
         <TrashIcon />
       </button>
       <div className="user">
-      {/* onClick={()=>dispatch(addToCart(props.pizza.id))} */}
+
         <div className="user-info">
-        <button className="cart-btn" type="button" onClick={dispatch(()=> incrementQuantity(pizza.id))}>
+        <button className="cart-btn" type="button" onClick={()=> dispatch(incrementQuantity(pizza.id))}>
           <PlusIcon />
         </button>
           <h5>{pizza.quantity}</h5>
-          <button className="cart-btn" type="button" onClick={dispatch(()=> decrementQuantity(pizza.id))}>
-          <PlusIcon />
+          <button className="cart-btn" type="button" onClick={()=> dispatch(decrementQuantity(pizza.id))}>
+          <MinusIcon />
         </button>
         </div>
       </div>
