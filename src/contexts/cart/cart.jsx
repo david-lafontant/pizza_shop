@@ -1,7 +1,8 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import CartData from '../../components/CartData/CartData';
-import { removeAllFromCart } from '../../features/home/homeSlice'
+import { removeAllFromCart } from '../../features/home/homeSlice';
+import { formatMoney } from '../../modules/format';
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -36,7 +37,7 @@ const Cart = () => {
 
       </div>
       <div>
-        <p>Total price {grandTotal}</p>
+        <p>Total price {formatMoney(grandTotal)}</p>
       </div>
       <div>
         <button type="button" onClick={() => dispatch(removeAllFromCart())}>
