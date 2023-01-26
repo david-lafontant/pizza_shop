@@ -84,6 +84,7 @@ In order to run this project you need:
 
  - [Node](https://nodejs.org/en/download/)
  - [React](https://reactjs.org/)
+ - [Git](https://git-scm.com/downloads)
  - a code editor
  - a browser
 
@@ -108,16 +109,13 @@ Install this project with:
   npm install
 ```
 
-
 ### Usage
 
 To run the project, execute the following command:
 
-
 ```
   npm run dev
 ```
-
 
 <!--
 ### Run tests
@@ -150,13 +148,13 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Author1**
+👤 **David**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-
+Platform | Badge |
+ --- | --- |
+ **GitHub**  | [@david-lafontant](https://github.com/david-lafontant)
+ **Twitter** | [@manikatex](https://twitter.com/manikatex)
+ **LinkedIn** | [David Lafontant](https://www.linkedin.com/in/david-lafontant/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
